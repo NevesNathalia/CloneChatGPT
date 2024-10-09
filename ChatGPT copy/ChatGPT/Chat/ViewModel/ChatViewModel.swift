@@ -9,6 +9,17 @@ import UIKit
 
 class ChatViewModel {
     
-    var messageList: [Message] = []
+    private var messageList: [Message] = []
     
+    public func addMessage(message: String, type: TypeMessage) {
+        messageList.insert(Message(message: message.trimmingCharacters(in: .whitespacesAndNewlines), date: Date(), typeMessage: type), at: .zero)
+    }
+    
+    public func loadCurrentMessages(indexPath: IndexPath) -> Message {
+        messageList[indexPath.row]
+    }
+    
+    public var numberOfRowsInSection: Int {
+        messageList.count
+    }
 }

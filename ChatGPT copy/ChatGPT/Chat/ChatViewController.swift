@@ -10,6 +10,7 @@ import UIKit
 class ChatViewController: UIViewController {
     
     var screen: ChatScreen?
+    var viewModel: ChatViewModel = ChatViewModel()
 
     
     override func viewWillAppear(_ animated: Bool) {
@@ -32,24 +33,28 @@ class ChatViewController: UIViewController {
         view.backgroundColor = .background
     }
     
-    private func addMessage(message: String, type: TypeMessage) {
-        messageList.insert(Message(message: message.trimmingCharacters(in: .whitespacesAndNewlines), date: Date(), typeMessage: type), at: .zero)
-        reloadData()
-    }
+//    private func addMessage(message: String, type: TypeMessage) {
+//        messageList.insert(Message(message: message.trimmingCharacters(in: .whitespacesAndNewlines), date: Date(), typeMessage: type), at: .zero)
+//        reloadData()
+//    }
     
     private func reloadData() {
         screen?.tableView.reloadData()
     }
     
-    private func loadCurrentMessage(indexPath: IndexPath) -> Message {
-        return messageList[indexPath.row]
-    }
+//    private func loadCurrentMessage(indexPath: IndexPath) -> Message {
+//        return viewModel.loadCurrentMessages(indexPath: indexPath)
+//    }
     
     private func heightForRow(indexPath: IndexPath) -> CGFloat {
-        let message = loadCurrentMessage(indexPath: indexPath).message
+        let message = viewModel.loadCurrentMessages(indexPath: indexPath).message
         let font = UIFont.helveticaNeueMedium(size: 16)
         let estimetedHeight = message.heightWithConstrainedWidth(width: 220, font: font)
         return estimetedHeight + 65
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
     }
     
 }
@@ -57,11 +62,11 @@ class ChatViewController: UIViewController {
 extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return messageList.count
+        viewModel.numberOfRowsInSection
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let message = loadCurrentMessage(indexPath: indexPath)
+        let message = viewModel.loadCurrentMessages(indexPath: indexPath)
         
         switch message.typeMessage {
             
@@ -85,6 +90,7 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
 extension ChatViewController: ChatScreenProtocol {
     
     func didSendMessage(_ message: String) {
-        addMessage(message: message, type: .user)
+        viewModel.addMessage(message: message, type: .user)
+        reloadData()
     }
 }
