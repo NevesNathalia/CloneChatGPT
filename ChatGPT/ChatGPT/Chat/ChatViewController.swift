@@ -7,14 +7,18 @@
 
 import UIKit
 
+enum sideOfButton {
+    case left
+    case right
+}
+
 class ChatViewController: UIViewController {
     
     var screen: ChatScreen?
     var viewModel: ChatViewModel = ChatViewModel()
 
-    
     override func viewWillAppear(_ animated: Bool) {
-        navigationItem.title = "Gabriel"
+        configBarButton()
     }
     
     override func loadView() {
@@ -29,6 +33,23 @@ class ChatViewController: UIViewController {
         configBackground()
     }
     
+    private func configBarButton() {
+        configButtons(image: UIImage(systemName: "mic") ?? UIImage(), side: .left, action: #selector (startMic))
+        configButtons(image: UIImage(systemName: "photo") ?? UIImage(), side: .right, action: #selector (startImage))
+        
+    }
+    
+    private func configButtons(image: UIImage, side: sideOfButton, action: Selector) {
+        let button = UIBarButtonItem(image: image, style: .done, target: self, action: action)
+        button.tintColor = .white
+        switch side {
+        case .left:
+            navigationItem.leftBarButtonItem = button
+        case .right:
+            navigationItem.rightBarButtonItem = button
+        }
+    }
+    
     private func configBackground() {
         view.backgroundColor = .background
     }
@@ -40,6 +61,14 @@ class ChatViewController: UIViewController {
     
     private func reloadData() {
         screen?.tableView.reloadData()
+    }
+    
+    @objc private func startMic() {
+        print("Botao pra iniciar o mic")
+    }
+    
+    @objc private func startImage() {
+        print("Botao pra iniciar a imagem")
     }
     
 //    private func loadCurrentMessage(indexPath: IndexPath) -> Message {

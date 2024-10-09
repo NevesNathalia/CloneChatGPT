@@ -58,7 +58,7 @@ class ChatScreen: UIView {
         button.layer.shadowOpacity = 0.3
         button.addTarget(self, action: #selector(self.tappedSendButton), for: .touchUpInside)
         button.setImage(UIImage(named: "send"), for: .normal)
-//        button.isEnabled = false
+        button.isEnabled = false
         button.transform = .init(scaleX: 0.8, y: 0.8)
         return button
     }()
@@ -81,6 +81,7 @@ class ChatScreen: UIView {
     }
     
     @objc private func tappedSendButton() {
+        sendButton.touchAnimation()
         delegate?.didSendMessage(inputMessageTextField.text ?? "")
         pushMessage()
     }

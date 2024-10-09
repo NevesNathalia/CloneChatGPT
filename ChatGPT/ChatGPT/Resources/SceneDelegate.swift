@@ -16,7 +16,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let viewController = ChatViewController()
         let window = UIWindow(windowScene: windowScene)
-        window.rootViewController = viewController
+        let nav = UINavigationController(rootViewController: viewController)
+        window.rootViewController = nav
         window.makeKeyAndVisible()
         self.window = window
     }
