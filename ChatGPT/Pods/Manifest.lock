@@ -1,0 +1,16 @@
+PODS:
+  - OpenAISwift (1.3.0)
+
+DEPENDENCIES:
+  - OpenAISwift
+
+SPEC REPOS:
+  trunk:
+    - OpenAISwift
+
+SPEC CHECKSUMS:
+  OpenAISwift: 9447a77c8098754f5fa61b9f6e8ab9e2ce592fbd
+
+PODFILE CHECKSUM: 1ecc06d209d972f16a439715a75434920bd1a304
+
+COCOAPODS: 1.15.2
