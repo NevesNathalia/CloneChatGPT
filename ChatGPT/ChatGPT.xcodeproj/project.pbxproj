@@ -15,6 +15,7 @@
 		C40EB6962CB6B1FD000B30BA /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40EB6952CB6B1FD000B30BA /* UIButton+Extension.swift */; };
 		C4B2AD522CB851C900889D44 /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B2AD512CB851BF00889D44 /* APIKeys.swift */; };
 		C4B2AD542CB941E800889D44 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B2AD532CB941E800889D44 /* ServiceManager.swift */; };
+		C4DF6D072CB98B0E001CCDB9 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = C4DF6D062CB98B0E001CCDB9 /* .gitignore */; };
 		C4F76B842BED3E350076BC33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F76B832BED3E350076BC33 /* AppDelegate.swift */; };
 		C4F76B862BED3E350076BC33 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F76B852BED3E350076BC33 /* SceneDelegate.swift */; };
 		C4F76B882BED3E350076BC33 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F76B872BED3E350076BC33 /* ChatViewController.swift */; };
@@ -40,6 +41,7 @@
 		C40EB6952CB6B1FD000B30BA /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		C4B2AD512CB851BF00889D44 /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
 		C4B2AD532CB941E800889D44 /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
+		C4DF6D062CB98B0E001CCDB9 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		C4F76B802BED3E350076BC33 /* ChatGPT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatGPT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4F76B832BED3E350076BC33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4F76B852BED3E350076BC33 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				C4F76B972BED3FDD0076BC33 /* Chat */,
 				C4F76B992BED40010076BC33 /* Resources */,
 				C4F76B912BED3E3C0076BC33 /* Info.plist */,
+				C4DF6D062CB98B0E001CCDB9 /* .gitignore */,
 			);
 			path = ChatGPT;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4F76B8D2BED3E3C0076BC33 /* Assets.xcassets in Resources */,
+				C4DF6D072CB98B0E001CCDB9 /* .gitignore in Resources */,
 				C4F76B902BED3E3C0076BC33 /* Base in Resources */,
 				C40EB6912CB6B0AF000B30BA /* Person.json in Resources */,
 			);
