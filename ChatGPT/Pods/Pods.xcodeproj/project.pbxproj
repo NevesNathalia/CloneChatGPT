@@ -48,14 +48,14 @@
 		5EA10B3A679398C55FD7B6BBDCD885C1 /* Pods-ChatGPT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ChatGPT.release.xcconfig"; sourceTree = "<group>"; };
 		5FCC7BE3829467CE542D282109A5E603 /* Pods-ChatGPT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ChatGPT.debug.xcconfig"; sourceTree = "<group>"; };
 		6212C9829B7B38CC03CD5161A7F57A61 /* OpenAISwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "OpenAISwift-dummy.m"; sourceTree = "<group>"; };
-		6AB5B4C09CE68B0E6A17AF13D1E56378 /* OpenAISwift */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = OpenAISwift; path = OpenAISwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AB5B4C09CE68B0E6A17AF13D1E56378 /* OpenAISwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OpenAISwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		8240B2E679D148B6E01C38913819F248 /* Pods-ChatGPT-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ChatGPT-Info.plist"; sourceTree = "<group>"; };
 		85F2F32B2C780A2176846BCD210EB600 /* Instruction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Instruction.swift; path = Sources/OpenAISwift/Models/Instruction.swift; sourceTree = "<group>"; };
 		9355F85F1BD3B23FA00D96C84C3A5F75 /* Pods-ChatGPT-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ChatGPT-acknowledgements.markdown"; sourceTree = "<group>"; };
-		94678519A47E0263D29FF1C3D97BF333 /* Pods-ChatGPT */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-ChatGPT"; path = Pods_ChatGPT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		94678519A47E0263D29FF1C3D97BF333 /* Pods_ChatGPT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatGPT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9712333CC17BA6C3FB15466EDF3BA41C /* OpenAISwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = OpenAISwift.modulemap; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		AEF25D85F99D637B5AA00EDB6B93A06C /* OpenAISwift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "OpenAISwift-Info.plist"; sourceTree = "<group>"; };
 		B4BD21C232A6ABF4E951BBE35691D6AD /* OpenAISwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = OpenAISwift.debug.xcconfig; sourceTree = "<group>"; };
 		C0394C1944F41685EDD2211D56C5EFA1 /* Pods-ChatGPT.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ChatGPT.modulemap"; sourceTree = "<group>"; };
@@ -104,8 +104,8 @@
 		259B1D7D033BCA7D840B497966DC4EA7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6AB5B4C09CE68B0E6A17AF13D1E56378 /* OpenAISwift */,
-				94678519A47E0263D29FF1C3D97BF333 /* Pods-ChatGPT */,
+				6AB5B4C09CE68B0E6A17AF13D1E56378 /* OpenAISwift.framework */,
+				94678519A47E0263D29FF1C3D97BF333 /* Pods_ChatGPT.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -148,7 +148,6 @@
 				37C4EE83409AA08106AB45E01648B99D /* OpenAISwift.swift */,
 				1318EA67BC021E0E9631F86C9AB1337A /* Support Files */,
 			);
-			name = OpenAISwift;
 			path = OpenAISwift;
 			sourceTree = "<group>";
 		};
@@ -226,7 +225,7 @@
 			);
 			name = "Pods-ChatGPT";
 			productName = Pods_ChatGPT;
-			productReference = 94678519A47E0263D29FF1C3D97BF333 /* Pods-ChatGPT */;
+			productReference = 94678519A47E0263D29FF1C3D97BF333 /* Pods_ChatGPT.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		B928DEF19561A2877B9C66303F5B1720 /* OpenAISwift */ = {
@@ -244,7 +243,7 @@
 			);
 			name = OpenAISwift;
 			productName = OpenAISwift;
-			productReference = 6AB5B4C09CE68B0E6A17AF13D1E56378 /* OpenAISwift */;
+			productReference = 6AB5B4C09CE68B0E6A17AF13D1E56378 /* OpenAISwift.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -265,7 +264,6 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			minimizedProjectReferenceProxies = 0;
 			productRefGroup = 259B1D7D033BCA7D840B497966DC4EA7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -347,7 +345,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-ChatGPT/Pods-ChatGPT-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -362,7 +360,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -421,7 +419,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -450,7 +448,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/OpenAISwift/OpenAISwift-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/OpenAISwift/OpenAISwift-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -463,7 +461,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -485,7 +483,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/OpenAISwift/OpenAISwift-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/OpenAISwift/OpenAISwift-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -498,7 +496,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -521,7 +519,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-ChatGPT/Pods-ChatGPT-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -536,7 +534,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -593,7 +591,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
