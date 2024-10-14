@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 protocol ChatScreenProtocol: AnyObject {
     func didSendMessage(_ message: String)
@@ -13,6 +14,7 @@ protocol ChatScreenProtocol: AnyObject {
 
 class ChatScreen: UIView {
     
+    private var player: AVAudioPlayer?
     weak private var delegate: ChatScreenProtocol?
     
     public func delegate(delegate: ChatScreenProtocol) {
@@ -82,6 +84,7 @@ class ChatScreen: UIView {
     
     @objc private func tappedSendButton() {
         sendButton.touchAnimation()
+        playSound()
         delegate?.didSendMessage(inputMessageTextField.text ?? "")
         pushMessage()
     }
@@ -102,6 +105,19 @@ class ChatScreen: UIView {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func playSound() {
+        guard let url = Bundle.main.url(forResource: "send", withExtension: "wav") else { return }
+        do {
+            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
+            try AVAudioSession.sharedInstance().setActive(true)
+            self.player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.wav.rawValue)
+            guard let player = self.player else { return }
+            player.play()
+        } catch let error {
+            print("Erro ao tocar o som: \(error.localizedDescription)")
+        }
     }
     
     private func pushMessage() {

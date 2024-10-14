@@ -30,6 +30,7 @@ class ChatViewController: UIViewController {
         super.viewDidLoad()
         screen?.configTableView(delegate: self, dataSource: self)
         screen?.delegate(delegate: self)
+        viewModel.delegate(delegate: self)
         configBackground()
     }
     
@@ -61,6 +62,7 @@ class ChatViewController: UIViewController {
     
     private func reloadData() {
         screen?.tableView.reloadData()
+        vibrate()
     }
     
     @objc private func startMic() {
@@ -75,11 +77,10 @@ class ChatViewController: UIViewController {
 //        return viewModel.loadCurrentMessages(indexPath: indexPath)
 //    }
     
-    private func heightForRow(indexPath: IndexPath) -> CGFloat {
-        let message = viewModel.loadCurrentMessages(indexPath: indexPath).message
-        let font = UIFont.helveticaNeueMedium(size: 16)
-        let estimetedHeight = message.heightWithConstrainedWidth(width: 220, font: font)
-        return estimetedHeight + 65
+    func vibrate() {
+        let generator = UIImpactFeedbackGenerator(style: .medium)
+        generator.prepare()
+        generator.impactOccurred()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -112,8 +113,20 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return heightForRow(indexPath: indexPath)
+        return viewModel.heightForRow(indexPath: indexPath)
     }
+}
+
+extension ChatViewController: ChatViewModelProtocol {
+    
+    func success() {
+        reloadData()
+    }
+    
+    func error(message: String) {
+        reloadData()
+    }
+    
 }
 
 extension ChatViewController: ChatScreenProtocol {
@@ -121,5 +134,6 @@ extension ChatViewController: ChatScreenProtocol {
     func didSendMessage(_ message: String) {
         viewModel.addMessage(message: message, type: .user)
         reloadData()
+        viewModel.featchMessage(message: message)
     }
 }
