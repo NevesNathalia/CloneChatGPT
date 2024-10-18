@@ -49,7 +49,6 @@ class IncomingTextMessageTableViewCell: UITableViewCell {
         addSubview(contactMessageView)
         contactMessageView.addSubview(messageLabel)
     }
-    
     private func configConstraints() {
         NSLayoutConstraint.activate([
             contactMessageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),

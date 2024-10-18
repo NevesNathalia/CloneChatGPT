@@ -9,6 +9,7 @@ import UIKit
 import AVFoundation
 
 protocol ChatScreenProtocol: AnyObject {
+    @MainActor
     func didSendMessage(_ message: String)
 }
 
@@ -85,7 +86,9 @@ class ChatScreen: UIView {
     @objc private func tappedSendButton() {
         sendButton.touchAnimation()
         playSound()
-        delegate?.didSendMessage(inputMessageTextField.text ?? "")
+        DispatchQueue.main.async {
+            self.delegate?.didSendMessage(self.inputMessageTextField.text ?? "")
+        }
         pushMessage()
     }
     
@@ -121,7 +124,6 @@ class ChatScreen: UIView {
     }
     
     private func pushMessage() {
-        inputMessageTextField.text = ""
         sendButton.isEnabled = false
         sendButton.transform = .init(scaleX: 0.8, y: 0.8)
     }

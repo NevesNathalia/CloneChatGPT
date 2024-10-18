@@ -55,13 +55,11 @@ class ChatViewController: UIViewController {
         view.backgroundColor = .background
     }
     
-//    private func addMessage(message: String, type: TypeMessage) {
-//        messageList.insert(Message(message: message.trimmingCharacters(in: .whitespacesAndNewlines), date: Date(), typeMessage: type), at: .zero)
-//        reloadData()
-//    }
-    
-    private func reloadData() {
-        screen?.tableView.reloadData()
+     private func reloadData() {
+         DispatchQueue.main.async {
+             self.screen?.tableView.reloadData()
+         }
+        
         vibrate()
     }
     
@@ -72,10 +70,6 @@ class ChatViewController: UIViewController {
     @objc private func startImage() {
         print("Botao pra iniciar a imagem")
     }
-    
-//    private func loadCurrentMessage(indexPath: IndexPath) -> Message {
-//        return viewModel.loadCurrentMessages(indexPath: indexPath)
-//    }
     
     func vibrate() {
         let generator = UIImpactFeedbackGenerator(style: .medium)
@@ -135,5 +129,6 @@ extension ChatViewController: ChatScreenProtocol {
         viewModel.addMessage(message: message, type: .user)
         reloadData()
         viewModel.featchMessage(message: message)
+        screen?.inputMessageTextField.text = ""
     }
 }

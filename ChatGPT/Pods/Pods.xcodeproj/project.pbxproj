@@ -3,127 +3,47 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		33FEF31B1B0F6F537CA5B37D3FCE0BC7 /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1AAC7B9A10C11CBB491AFA6CE8F8DD7 /* ChatMessage.swift */; };
-		3A8C77297302D1AA1DB31FEC697164FA /* Pods-ChatGPT-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A5D27D2E63163CF71C9C02BDBCED5D9 /* Pods-ChatGPT-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		463179E58E38DB9810D4B3BA465B5715 /* OpenAI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93CA9DD3645846468BE135EDCDCFC79 /* OpenAI.swift */; };
-		46D64161E7D7269ED96E9006E4245DB3 /* OpenAIModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06041E8EAE49EFC8B9DCFF9382E233FF /* OpenAIModelType.swift */; };
-		5201052BB4AAF9DB0C655CF3FA27C3C1 /* OpenAISwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6212C9829B7B38CC03CD5161A7F57A61 /* OpenAISwift-dummy.m */; };
-		5877C8EAC634C5803501477AC6F93170 /* Instruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F2F32B2C780A2176846BCD210EB600 /* Instruction.swift */; };
-		80B60D85D92C671FB53429BA658EBE2A /* Pods-ChatGPT-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E446D492F38E5F7D384C42EFF08A3FA /* Pods-ChatGPT-dummy.m */; };
-		907BE8EAE94789AB699947FE9728A0A5 /* ImageGeneration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D840C425826B3802863E464D9317970 /* ImageGeneration.swift */; };
-		96F6A0FAE84595D59B4A2BDA3E40DC29 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5DD9A672E737FFCBAEE060DF8F291D /* Command.swift */; };
-		AEA09789ACADE03708208A92721DCEB0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		C0C123E9E8A5916C4354E17B07884E58 /* OpenAIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AFD89A06E5DA9927239499E934ACB9 /* OpenAIEndpoint.swift */; };
-		EAD0F1705FD7891BC7A9A0079705E686 /* EmbeddingsInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8A796A81B0D856F8ED7D4AE0BA78EE /* EmbeddingsInput.swift */; };
-		EBCDA33B3D6640C11A92E5FCBBD3D997 /* OpenAISwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C11FD771DB2328D796293F16AEF299F8 /* OpenAISwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F1CAE82299F5FAF09B3986A52FFF092F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		FDDE2A3ED7D443816DB70625CC18F6D5 /* OpenAISwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C4EE83409AA08106AB45E01648B99D /* OpenAISwift.swift */; };
+		8AF2264C685AB8EA7E809599AE9E9E7F /* Pods-ChatGPT-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ECE1F40CE3887ABD33D622A9CC146AD3 /* Pods-ChatGPT-dummy.m */; };
+		93525AF9EA9DB00E5DCB806640842064 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		CED0F6B0A25D60349DAF6800647E5D92 /* Pods-ChatGPT-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CCACE39B4C2BF2994A8685BACC58DD8C /* Pods-ChatGPT-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		7A0441E7B3E067AF3E800E75FB201F45 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B928DEF19561A2877B9C66303F5B1720;
-			remoteInfo = OpenAISwift;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		04AFD89A06E5DA9927239499E934ACB9 /* OpenAIEndpoint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OpenAIEndpoint.swift; path = Sources/OpenAISwift/OpenAIEndpoint.swift; sourceTree = "<group>"; };
-		06041E8EAE49EFC8B9DCFF9382E233FF /* OpenAIModelType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OpenAIModelType.swift; path = Sources/OpenAISwift/Models/OpenAIModelType.swift; sourceTree = "<group>"; };
-		0A5D27D2E63163CF71C9C02BDBCED5D9 /* Pods-ChatGPT-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ChatGPT-umbrella.h"; sourceTree = "<group>"; };
-		0D840C425826B3802863E464D9317970 /* ImageGeneration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageGeneration.swift; path = Sources/OpenAISwift/Models/ImageGeneration.swift; sourceTree = "<group>"; };
-		141786D54A8ED3DC25BE91FDDECD548E /* Pods-ChatGPT-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ChatGPT-acknowledgements.plist"; sourceTree = "<group>"; };
-		1A8A796A81B0D856F8ED7D4AE0BA78EE /* EmbeddingsInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EmbeddingsInput.swift; path = Sources/OpenAISwift/Models/EmbeddingsInput.swift; sourceTree = "<group>"; };
-		2D0A8E6E5AAC36A8707A34212C5D2F1E /* OpenAISwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = OpenAISwift.release.xcconfig; sourceTree = "<group>"; };
-		37C4EE83409AA08106AB45E01648B99D /* OpenAISwift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OpenAISwift.swift; path = Sources/OpenAISwift/OpenAISwift.swift; sourceTree = "<group>"; };
-		44D3BAC94F9DA6FC11600081E4AD0482 /* Pods-ChatGPT-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ChatGPT-frameworks.sh"; sourceTree = "<group>"; };
-		5E446D492F38E5F7D384C42EFF08A3FA /* Pods-ChatGPT-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ChatGPT-dummy.m"; sourceTree = "<group>"; };
-		5EA10B3A679398C55FD7B6BBDCD885C1 /* Pods-ChatGPT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ChatGPT.release.xcconfig"; sourceTree = "<group>"; };
-		5FCC7BE3829467CE542D282109A5E603 /* Pods-ChatGPT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ChatGPT.debug.xcconfig"; sourceTree = "<group>"; };
-		6212C9829B7B38CC03CD5161A7F57A61 /* OpenAISwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "OpenAISwift-dummy.m"; sourceTree = "<group>"; };
-		6AB5B4C09CE68B0E6A17AF13D1E56378 /* OpenAISwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OpenAISwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BAA8ADE65B8A30BA9CE7DB4DB741CD6 /* Pods-ChatGPT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ChatGPT.release.xcconfig"; sourceTree = "<group>"; };
+		5F49FE72FDC7F36C52B42F1BCDFF7AF4 /* Pods-ChatGPT.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ChatGPT.modulemap"; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		8240B2E679D148B6E01C38913819F248 /* Pods-ChatGPT-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ChatGPT-Info.plist"; sourceTree = "<group>"; };
-		85F2F32B2C780A2176846BCD210EB600 /* Instruction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Instruction.swift; path = Sources/OpenAISwift/Models/Instruction.swift; sourceTree = "<group>"; };
-		9355F85F1BD3B23FA00D96C84C3A5F75 /* Pods-ChatGPT-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ChatGPT-acknowledgements.markdown"; sourceTree = "<group>"; };
-		94678519A47E0263D29FF1C3D97BF333 /* Pods_ChatGPT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatGPT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9712333CC17BA6C3FB15466EDF3BA41C /* OpenAISwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = OpenAISwift.modulemap; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		AEF25D85F99D637B5AA00EDB6B93A06C /* OpenAISwift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "OpenAISwift-Info.plist"; sourceTree = "<group>"; };
-		B4BD21C232A6ABF4E951BBE35691D6AD /* OpenAISwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = OpenAISwift.debug.xcconfig; sourceTree = "<group>"; };
-		C0394C1944F41685EDD2211D56C5EFA1 /* Pods-ChatGPT.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ChatGPT.modulemap"; sourceTree = "<group>"; };
-		C11FD771DB2328D796293F16AEF299F8 /* OpenAISwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OpenAISwift-umbrella.h"; sourceTree = "<group>"; };
-		CAB1AD642C59FB54FBB9DB726B066823 /* OpenAISwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OpenAISwift-prefix.pch"; sourceTree = "<group>"; };
-		CD5DD9A672E737FFCBAEE060DF8F291D /* Command.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Command.swift; path = Sources/OpenAISwift/Models/Command.swift; sourceTree = "<group>"; };
-		D1AAC7B9A10C11CBB491AFA6CE8F8DD7 /* ChatMessage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChatMessage.swift; path = Sources/OpenAISwift/Models/ChatMessage.swift; sourceTree = "<group>"; };
-		E93CA9DD3645846468BE135EDCDCFC79 /* OpenAI.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OpenAI.swift; path = Sources/OpenAISwift/Models/OpenAI.swift; sourceTree = "<group>"; };
+		76CBE06AF30849B0A9506C1DCF3B4680 /* Pods-ChatGPT-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ChatGPT-acknowledgements.markdown"; sourceTree = "<group>"; };
+		82254834400A21156D071F82BC6BAAEF /* Pods-ChatGPT-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ChatGPT-acknowledgements.plist"; sourceTree = "<group>"; };
+		944625122DF99C063945D1CC660BB112 /* Pods-ChatGPT-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ChatGPT-Info.plist"; sourceTree = "<group>"; };
+		94678519A47E0263D29FF1C3D97BF333 /* Pods-ChatGPT */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-ChatGPT"; path = Pods_ChatGPT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		CCACE39B4C2BF2994A8685BACC58DD8C /* Pods-ChatGPT-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ChatGPT-umbrella.h"; sourceTree = "<group>"; };
+		ECE1F40CE3887ABD33D622A9CC146AD3 /* Pods-ChatGPT-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ChatGPT-dummy.m"; sourceTree = "<group>"; };
+		FA8FDC07F9DF17880A389F47F43F4FC9 /* Pods-ChatGPT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ChatGPT.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1655824F0FEBEA6E810F38A6183BD3FB /* Frameworks */ = {
+		9B1E0241EB8AF1A64465DB24DBB19F04 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1CAE82299F5FAF09B3986A52FFF092F /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F4F682C5BD8A2A2E1ABA3F7FF870C3D2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AEA09789ACADE03708208A92721DCEB0 /* Foundation.framework in Frameworks */,
+				93525AF9EA9DB00E5DCB806640842064 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1318EA67BC021E0E9631F86C9AB1337A /* Support Files */ = {
+		54C5F9DE28B8D2794E75366A8685C13D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9712333CC17BA6C3FB15466EDF3BA41C /* OpenAISwift.modulemap */,
-				6212C9829B7B38CC03CD5161A7F57A61 /* OpenAISwift-dummy.m */,
-				AEF25D85F99D637B5AA00EDB6B93A06C /* OpenAISwift-Info.plist */,
-				CAB1AD642C59FB54FBB9DB726B066823 /* OpenAISwift-prefix.pch */,
-				C11FD771DB2328D796293F16AEF299F8 /* OpenAISwift-umbrella.h */,
-				B4BD21C232A6ABF4E951BBE35691D6AD /* OpenAISwift.debug.xcconfig */,
-				2D0A8E6E5AAC36A8707A34212C5D2F1E /* OpenAISwift.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/OpenAISwift";
-			sourceTree = "<group>";
-		};
-		259B1D7D033BCA7D840B497966DC4EA7 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				6AB5B4C09CE68B0E6A17AF13D1E56378 /* OpenAISwift.framework */,
-				94678519A47E0263D29FF1C3D97BF333 /* Pods_ChatGPT.framework */,
+				94678519A47E0263D29FF1C3D97BF333 /* Pods-ChatGPT */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		45885CC335B65DE516C053F08FC2CAC4 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				C40B4FFC1CAEE10EDAFE2E778116EC07 /* OpenAISwift */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		539B3E7BA0256602C5F353DB5ACA0328 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				E4B46931CBDBB9ADF15300AB5299A684 /* Pods-ChatGPT */,
-			);
-			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
@@ -134,21 +54,28 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		C40B4FFC1CAEE10EDAFE2E778116EC07 /* OpenAISwift */ = {
+		6E5B0241346D75DE746D98FCEBF640AF /* Pods-ChatGPT */ = {
 			isa = PBXGroup;
 			children = (
-				D1AAC7B9A10C11CBB491AFA6CE8F8DD7 /* ChatMessage.swift */,
-				CD5DD9A672E737FFCBAEE060DF8F291D /* Command.swift */,
-				1A8A796A81B0D856F8ED7D4AE0BA78EE /* EmbeddingsInput.swift */,
-				0D840C425826B3802863E464D9317970 /* ImageGeneration.swift */,
-				85F2F32B2C780A2176846BCD210EB600 /* Instruction.swift */,
-				E93CA9DD3645846468BE135EDCDCFC79 /* OpenAI.swift */,
-				04AFD89A06E5DA9927239499E934ACB9 /* OpenAIEndpoint.swift */,
-				06041E8EAE49EFC8B9DCFF9382E233FF /* OpenAIModelType.swift */,
-				37C4EE83409AA08106AB45E01648B99D /* OpenAISwift.swift */,
-				1318EA67BC021E0E9631F86C9AB1337A /* Support Files */,
+				5F49FE72FDC7F36C52B42F1BCDFF7AF4 /* Pods-ChatGPT.modulemap */,
+				76CBE06AF30849B0A9506C1DCF3B4680 /* Pods-ChatGPT-acknowledgements.markdown */,
+				82254834400A21156D071F82BC6BAAEF /* Pods-ChatGPT-acknowledgements.plist */,
+				ECE1F40CE3887ABD33D622A9CC146AD3 /* Pods-ChatGPT-dummy.m */,
+				944625122DF99C063945D1CC660BB112 /* Pods-ChatGPT-Info.plist */,
+				CCACE39B4C2BF2994A8685BACC58DD8C /* Pods-ChatGPT-umbrella.h */,
+				FA8FDC07F9DF17880A389F47F43F4FC9 /* Pods-ChatGPT.debug.xcconfig */,
+				4BAA8ADE65B8A30BA9CE7DB4DB741CD6 /* Pods-ChatGPT.release.xcconfig */,
 			);
-			path = OpenAISwift;
+			name = "Pods-ChatGPT";
+			path = "Target Support Files/Pods-ChatGPT";
+			sourceTree = "<group>";
+		};
+		77B55F8275DADC41D06A5A74391C4C66 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6E5B0241346D75DE746D98FCEBF640AF /* Pods-ChatGPT */,
+			);
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -156,9 +83,8 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				45885CC335B65DE516C053F08FC2CAC4 /* Pods */,
-				259B1D7D033BCA7D840B497966DC4EA7 /* Products */,
-				539B3E7BA0256602C5F353DB5ACA0328 /* Targets Support Files */,
+				54C5F9DE28B8D2794E75366A8685C13D /* Products */,
+				77B55F8275DADC41D06A5A74391C4C66 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -170,39 +96,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E4B46931CBDBB9ADF15300AB5299A684 /* Pods-ChatGPT */ = {
-			isa = PBXGroup;
-			children = (
-				C0394C1944F41685EDD2211D56C5EFA1 /* Pods-ChatGPT.modulemap */,
-				9355F85F1BD3B23FA00D96C84C3A5F75 /* Pods-ChatGPT-acknowledgements.markdown */,
-				141786D54A8ED3DC25BE91FDDECD548E /* Pods-ChatGPT-acknowledgements.plist */,
-				5E446D492F38E5F7D384C42EFF08A3FA /* Pods-ChatGPT-dummy.m */,
-				44D3BAC94F9DA6FC11600081E4AD0482 /* Pods-ChatGPT-frameworks.sh */,
-				8240B2E679D148B6E01C38913819F248 /* Pods-ChatGPT-Info.plist */,
-				0A5D27D2E63163CF71C9C02BDBCED5D9 /* Pods-ChatGPT-umbrella.h */,
-				5FCC7BE3829467CE542D282109A5E603 /* Pods-ChatGPT.debug.xcconfig */,
-				5EA10B3A679398C55FD7B6BBDCD885C1 /* Pods-ChatGPT.release.xcconfig */,
-			);
-			name = "Pods-ChatGPT";
-			path = "Target Support Files/Pods-ChatGPT";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		819F862408117ABEA7FCBD0122DBCCBE /* Headers */ = {
+		963BAE60A08740490083A5F7E6D04C97 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EBCDA33B3D6640C11A92E5FCBBD3D997 /* OpenAISwift-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D8BE5EEA5F74F6ACA77E503AA8B19E30 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3A8C77297302D1AA1DB31FEC697164FA /* Pods-ChatGPT-umbrella.h in Headers */,
+				CED0F6B0A25D60349DAF6800647E5D92 /* Pods-ChatGPT-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,39 +112,20 @@
 /* Begin PBXNativeTarget section */
 		7B68D509A974153C069D2AC177D1958B /* Pods-ChatGPT */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C1C7054F7502582E197513080BCDBE36 /* Build configuration list for PBXNativeTarget "Pods-ChatGPT" */;
+			buildConfigurationList = AD76688D01F796568F79A9AC728839D2 /* Build configuration list for PBXNativeTarget "Pods-ChatGPT" */;
 			buildPhases = (
-				D8BE5EEA5F74F6ACA77E503AA8B19E30 /* Headers */,
-				753AC8AC48FFBA68019F53888A3B8271 /* Sources */,
-				F4F682C5BD8A2A2E1ABA3F7FF870C3D2 /* Frameworks */,
-				A6C120BC006F5893B754D24AA8F4161B /* Resources */,
+				963BAE60A08740490083A5F7E6D04C97 /* Headers */,
+				0DA98B8C788137C87F007E5F9EA7DB0C /* Sources */,
+				9B1E0241EB8AF1A64465DB24DBB19F04 /* Frameworks */,
+				0B1CE5F65808F1891BD73979D0A58C44 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				95FBF39B3FFBAD7E0D2585B5B5F48D87 /* PBXTargetDependency */,
 			);
 			name = "Pods-ChatGPT";
 			productName = Pods_ChatGPT;
-			productReference = 94678519A47E0263D29FF1C3D97BF333 /* Pods_ChatGPT.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		B928DEF19561A2877B9C66303F5B1720 /* OpenAISwift */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 942178B9054402A56F32C33F37595020 /* Build configuration list for PBXNativeTarget "OpenAISwift" */;
-			buildPhases = (
-				819F862408117ABEA7FCBD0122DBCCBE /* Headers */,
-				4E805AF1EA33BD14D1EF38CFD51FDF42 /* Sources */,
-				1655824F0FEBEA6E810F38A6183BD3FB /* Frameworks */,
-				7035387FCEFA7B925840293887FA277C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = OpenAISwift;
-			productName = OpenAISwift;
-			productReference = 6AB5B4C09CE68B0E6A17AF13D1E56378 /* OpenAISwift.framework */;
+			productReference = 94678519A47E0263D29FF1C3D97BF333 /* Pods-ChatGPT */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -256,7 +138,7 @@
 				LastUpgradeCheck = 1500;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 15.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -264,25 +146,18 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 259B1D7D033BCA7D840B497966DC4EA7 /* Products */;
+			minimizedProjectReferenceProxies = 0;
+			productRefGroup = 54C5F9DE28B8D2794E75366A8685C13D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B928DEF19561A2877B9C66303F5B1720 /* OpenAISwift */,
 				7B68D509A974153C069D2AC177D1958B /* Pods-ChatGPT */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		7035387FCEFA7B925840293887FA277C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A6C120BC006F5893B754D24AA8F4161B /* Resources */ = {
+		0B1CE5F65808F1891BD73979D0A58C44 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -292,81 +167,18 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		4E805AF1EA33BD14D1EF38CFD51FDF42 /* Sources */ = {
+		0DA98B8C788137C87F007E5F9EA7DB0C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33FEF31B1B0F6F537CA5B37D3FCE0BC7 /* ChatMessage.swift in Sources */,
-				96F6A0FAE84595D59B4A2BDA3E40DC29 /* Command.swift in Sources */,
-				EAD0F1705FD7891BC7A9A0079705E686 /* EmbeddingsInput.swift in Sources */,
-				907BE8EAE94789AB699947FE9728A0A5 /* ImageGeneration.swift in Sources */,
-				5877C8EAC634C5803501477AC6F93170 /* Instruction.swift in Sources */,
-				463179E58E38DB9810D4B3BA465B5715 /* OpenAI.swift in Sources */,
-				C0C123E9E8A5916C4354E17B07884E58 /* OpenAIEndpoint.swift in Sources */,
-				46D64161E7D7269ED96E9006E4245DB3 /* OpenAIModelType.swift in Sources */,
-				FDDE2A3ED7D443816DB70625CC18F6D5 /* OpenAISwift.swift in Sources */,
-				5201052BB4AAF9DB0C655CF3FA27C3C1 /* OpenAISwift-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		753AC8AC48FFBA68019F53888A3B8271 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				80B60D85D92C671FB53429BA658EBE2A /* Pods-ChatGPT-dummy.m in Sources */,
+				8AF2264C685AB8EA7E809599AE9E9E7F /* Pods-ChatGPT-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		95FBF39B3FFBAD7E0D2585B5B5F48D87 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = OpenAISwift;
-			target = B928DEF19561A2877B9C66303F5B1720 /* OpenAISwift */;
-			targetProxy = 7A0441E7B3E067AF3E800E75FB201F45 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
-		170DFF9B7A14D77B6976065AC6935211 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5FCC7BE3829467CE542D282109A5E603 /* Pods-ChatGPT.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-ChatGPT/Pods-ChatGPT-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-ChatGPT/Pods-ChatGPT.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 1;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		39F5B7CD9D2655A0D1F7D42E37920E8B /* Debug */ = {
+		8C9963745FD01B6B3EF95F9CE58D9F10 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -432,80 +244,9 @@
 			};
 			name = Debug;
 		};
-		5FE169102E769CB7C896D77056F38CDC /* Debug */ = {
+		9A8EB33BD5FBD075BE9227B975F9871F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B4BD21C232A6ABF4E951BBE35691D6AD /* OpenAISwift.debug.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/OpenAISwift/OpenAISwift-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/OpenAISwift/OpenAISwift-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/OpenAISwift/OpenAISwift.modulemap";
-				PRODUCT_MODULE_NAME = OpenAISwift;
-				PRODUCT_NAME = OpenAISwift;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = 1;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		60D3C079C09C622F9B3B9081CCF5FC70 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2D0A8E6E5AAC36A8707A34212C5D2F1E /* OpenAISwift.release.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/OpenAISwift/OpenAISwift-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/OpenAISwift/OpenAISwift-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/OpenAISwift/OpenAISwift.modulemap";
-				PRODUCT_MODULE_NAME = OpenAISwift;
-				PRODUCT_NAME = OpenAISwift;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = 1;
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		B800D6E043CE7359C8E2014A0022E7DE /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5EA10B3A679398C55FD7B6BBDCD885C1 /* Pods-ChatGPT.release.xcconfig */;
+			baseConfigurationReference = 4BAA8ADE65B8A30BA9CE7DB4DB741CD6 /* Pods-ChatGPT.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -534,14 +275,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		C873D3C071BDDC046D6E8F63C69C2591 /* Release */ = {
+		B9F3557045385CA606F5AF548D58B58A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -603,32 +344,60 @@
 			};
 			name = Release;
 		};
+		DA6B17369668C930380271C1BB98DDB9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA8FDC07F9DF17880A389F47F43F4FC9 /* Pods-ChatGPT.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ChatGPT/Pods-ChatGPT-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ChatGPT/Pods-ChatGPT.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				39F5B7CD9D2655A0D1F7D42E37920E8B /* Debug */,
-				C873D3C071BDDC046D6E8F63C69C2591 /* Release */,
+				8C9963745FD01B6B3EF95F9CE58D9F10 /* Debug */,
+				B9F3557045385CA606F5AF548D58B58A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		942178B9054402A56F32C33F37595020 /* Build configuration list for PBXNativeTarget "OpenAISwift" */ = {
+		AD76688D01F796568F79A9AC728839D2 /* Build configuration list for PBXNativeTarget "Pods-ChatGPT" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5FE169102E769CB7C896D77056F38CDC /* Debug */,
-				60D3C079C09C622F9B3B9081CCF5FC70 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C1C7054F7502582E197513080BCDBE36 /* Build configuration list for PBXNativeTarget "Pods-ChatGPT" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				170DFF9B7A14D77B6976065AC6935211 /* Debug */,
-				B800D6E043CE7359C8E2014A0022E7DE /* Release */,
+				DA6B17369668C930380271C1BB98DDB9 /* Debug */,
+				9A8EB33BD5FBD075BE9227B975F9871F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
