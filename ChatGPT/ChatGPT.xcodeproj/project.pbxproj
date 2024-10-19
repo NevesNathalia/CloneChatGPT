@@ -13,8 +13,6 @@
 		C40EB6912CB6B0AF000B30BA /* Person.json in Resources */ = {isa = PBXBuildFile; fileRef = C40EB6902CB6B0AE000B30BA /* Person.json */; };
 		C40EB6942CB6B160000B30BA /* ChatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40EB6932CB6B160000B30BA /* ChatService.swift */; };
 		C40EB6962CB6B1FD000B30BA /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40EB6952CB6B1FD000B30BA /* UIButton+Extension.swift */; };
-		C41292922CC442840083EB29 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41292912CC4427A0083EB29 /* HTTPMethod.swift */; };
-		C41292942CC442B60083EB29 /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41292932CC442AD0083EB29 /* NetworkingError.swift */; };
 		C4B2AD522CB851C900889D44 /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B2AD512CB851BF00889D44 /* APIKeys.swift */; };
 		C4DF6D5C2CBD6992001CCDB9 /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DF6D5B2CBD6981001CCDB9 /* NetworkLogger.swift */; };
 		C4DF6D5F2CBD6F90001CCDB9 /* send.wav in Resources */ = {isa = PBXBuildFile; fileRef = C4DF6D5D2CBD6F90001CCDB9 /* send.wav */; };
@@ -41,8 +39,6 @@
 		C40EB6902CB6B0AE000B30BA /* Person.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Person.json; sourceTree = "<group>"; };
 		C40EB6932CB6B160000B30BA /* ChatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatService.swift; sourceTree = "<group>"; };
 		C40EB6952CB6B1FD000B30BA /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
-		C41292912CC4427A0083EB29 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
-		C41292932CC442AD0083EB29 /* NetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
 		C4B2AD512CB851BF00889D44 /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
 		C4DF6D5B2CBD6981001CCDB9 /* NetworkLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
 		C4DF6D5D2CBD6F90001CCDB9 /* send.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = send.wav; sourceTree = "<group>"; };
@@ -108,8 +104,6 @@
 		C40EB6922CB6B0E5000B30BA /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				C41292932CC442AD0083EB29 /* NetworkingError.swift */,
-				C41292912CC4427A0083EB29 /* HTTPMethod.swift */,
 				C4DF6D5B2CBD6981001CCDB9 /* NetworkLogger.swift */,
 				C40EB6932CB6B160000B30BA /* ChatService.swift */,
 			);
@@ -335,7 +329,6 @@
 				C4F76B882BED3E350076BC33 /* ChatViewController.swift in Sources */,
 				C4B2AD522CB851C900889D44 /* APIKeys.swift in Sources */,
 				C40EB6962CB6B1FD000B30BA /* UIButton+Extension.swift in Sources */,
-				C41292942CC442B60083EB29 /* NetworkingError.swift in Sources */,
 				C4F76B842BED3E350076BC33 /* AppDelegate.swift in Sources */,
 				C4F76BA72BED71480076BC33 /* IncomingTextMessageTableViewCell.swift in Sources */,
 				C4F76B862BED3E350076BC33 /* SceneDelegate.swift in Sources */,
@@ -344,7 +337,6 @@
 				C4F76BA32BED67420076BC33 /* Message.swift in Sources */,
 				C4F76BA52BED6BBB0076BC33 /* OutgoingTextMessageTableViewCell.swift in Sources */,
 				2CB043C52CB57D43008FB8BA /* UIFont+Extension.swift in Sources */,
-				C41292922CC442840083EB29 /* HTTPMethod.swift in Sources */,
 				C4F76B9B2BED405A0076BC33 /* ChatScreen.swift in Sources */,
 				C40EB68C2CB5C7A4000B30BA /* ChatViewModel.swift in Sources */,
 				C4F76B9F2BED48160076BC33 /* UIColor+Extension.swift in Sources */,

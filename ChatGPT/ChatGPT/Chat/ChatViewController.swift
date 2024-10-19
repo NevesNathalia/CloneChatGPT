@@ -30,7 +30,7 @@ class ChatViewController: UIViewController {
         super.viewDidLoad()
         screen?.configTableView(delegate: self, dataSource: self)
         screen?.delegate(delegate: self)
-        viewModel.delegate(delegate: self)
+        viewModel.setDelegate(self)
         configBackground()
     }
     
@@ -58,7 +58,6 @@ class ChatViewController: UIViewController {
          DispatchQueue.main.async {
              self.screen?.tableView.reloadData()
          }
-        
         vibrate()
     }
     
@@ -119,7 +118,6 @@ extension ChatViewController: ChatViewModelProtocol {
     func error(message: String) {
         reloadData()
     }
-    
 }
 
 extension ChatViewController: ChatScreenProtocol {
@@ -127,7 +125,7 @@ extension ChatViewController: ChatScreenProtocol {
     func didSendMessage(_ message: String) {
         viewModel.addMessage(message: message, type: .user)
         reloadData()
-        viewModel.featchMessage(message: message)
+        viewModel.featchMessage(from: message)
         screen?.inputMessageTextField.text = ""
     }
 }

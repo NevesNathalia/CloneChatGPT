@@ -7,19 +7,23 @@
 
 import UIKit
 
-protocol ChatViewModelProtocol {
+protocol ChatViewModelProtocol: AnyObject {
     func success()
     func error(message: String)
 }
 
 class ChatViewModel {
     
-    private var delegate: ChatViewModelProtocol?
+    private weak var delegate: ChatViewModelProtocol?
     private var messageList: [Message] = []
     private var service: ChatService = ChatService()
     
-    public func delegate(delegate: ChatViewModelProtocol) {
+    public func setDelegate(_ delegate: ChatViewModelProtocol) {
         self.delegate = delegate
+    }
+    
+    public var numberOfRowsInSection: Int {
+        messageList.count
     }
     
     public func addMessage(message: String, type: TypeMessage) {
@@ -30,21 +34,19 @@ class ChatViewModel {
         messageList[indexPath.row]
     }
     
-    public var numberOfRowsInSection: Int {
-        messageList.count
-    }
-    
-    public func featchMessage(message: String) {
-        service.resquetChat(message) { [weak self] result in
+    public func featchMessage(from userMessage: String) {
+        service.requestChat(userMessage) { [weak self] result in
             guard let self else { return }
             switch result {
-            case .success(let success):
-                self.addMessage(message: String(describing: success.choices.first?.message.content ?? ""), type: .chatGPT)
+            case .success(let response):
+                let chatMessage = response.choices.first?.message.content ?? ""
+                self.addMessage(message: chatMessage, type: .chatGPT)
                 self.delegate?.success()
-            case .failure(let failure):
-                print(failure.localizedDescription)
-                self.addMessage(message: failure.localizedDescription, type: .chatGPT)
-                self.delegate?.error(message: failure.localizedDescription)
+            case .failure(let error):
+                let errorMessage = error.localizedDescription
+                print(errorMessage)
+                self.addMessage(message: errorMessage, type: .chatGPT)
+                self.delegate?.error(message: errorMessage)
             }
         }
     }
