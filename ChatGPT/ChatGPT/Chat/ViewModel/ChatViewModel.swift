@@ -34,25 +34,12 @@ class ChatViewModel {
         messageList.count
     }
     
-//    public func fecthMessages(message: String) {
-//        addMessage(message: message, type: .user)
-//        service.sendOpenAIRequest(text: message, completion: { result in
-//            switch result {
-//            case .success(let success):
-//                self.addMessage(message: success, type: .user)
-//            case .failure(let failure):
-//               self.addMessage(message: failure.localizedDescription, type: .chatGPT)
-//            }
-//        })
-//    }
-    
     public func featchMessage(message: String) {
-        service.sendOpenAIRequest(text: message) { [weak self] result in
+        service.resquetChat(message) { [weak self] result in
             guard let self else { return }
             switch result {
             case .success(let success):
-                print(success)
-                self.addMessage(message: success, type: .chatGPT)
+                self.addMessage(message: String(describing: success.choices.first?.message.content ?? ""), type: .chatGPT)
                 self.delegate?.success()
             case .failure(let failure):
                 print(failure.localizedDescription)

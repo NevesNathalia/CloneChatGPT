@@ -37,7 +37,6 @@ class ChatViewController: UIViewController {
     private func configBarButton() {
         configButtons(image: UIImage(systemName: "mic") ?? UIImage(), side: .left, action: #selector (startMic))
         configButtons(image: UIImage(systemName: "photo") ?? UIImage(), side: .right, action: #selector (startImage))
-        
     }
     
     private func configButtons(image: UIImage, side: sideOfButton, action: Selector) {

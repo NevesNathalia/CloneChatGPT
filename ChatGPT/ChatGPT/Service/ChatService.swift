@@ -8,57 +8,60 @@
 import UIKit
 
 class ChatService {
+    let baseUrl = "https://api.openai.com"
     
-    private let service: Service
-    
-    init() {
-        service = Service()
+    var session: URLSession {
+        let configuration = URLSessionConfiguration.default
+        configuration.httpAdditionalHeaders = ["Authorization": "Bearer \(APIKeys.authToken)", "Content-Type": "application/json"]
+        
+        let session = URLSession(configuration: configuration)
+        return session
     }
     
-    
-    func sendOpenAIRequest(text: String, completion: @escaping (Result<String, OpenAIError>) -> Void) {
-        service.resquetChat(text) { result in
-            
-            switch result {
-            case .success(let result):
-                completion(.success(result.choices.first?.message.content ?? ""))
-            case .failure(let error):
-                completion(.failure(.ApiError(error)))
-                
-            }
-            
-            
-            //        token.sendCompletion(with: text, model: openAIModelType, maxTokens: 4000, completionHandler: { result in
-            //            DispatchQueue.main.async {
-            //                switch result {
-            //                case .success(let model):
-            //                    guard let text = model.choices?.first?.text else {
-            //                        completion(.failure(.missingChoicesText))
-            //                        return
-            //                    }
-            //                    completion(.success(text))
-            //                case .failure(let error):
-            //                    completion(.failure(.ApiError(error)))
-            //                }
-            //            }
-            //        })
-            
-            
-            
-            
-            
-        }
+    func resquetChat(_ text: String, completion: @escaping (Result<Response, Error>) -> Void) {
+        let path = "/v1/chat/completions"
+        let urlString = baseUrl + path
+        guard let url = URL(string: urlString) else { return }
         
-        //    func sendMessage(text: String, completion: (Result<String, OpenAIError>) -> Void) {
-        //        OpenAISwift(authToken: APIKeys.authToken).sendCompletion(with: text, model: .gpt3(.davinci), maxTokens: 4000) { result in
-        //            switch result {
-        //            case .success(let success):
-        //                var message = success.choices?.first?.text ?? ""
-        //                completion(.success(message))
-        //            case .failure(let failure):
-        //                completion(.failure(failure))
-        //            }
-        //        }
-        //    }
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        let httpBody = Request(model: "gpt-4o-mini", messages: [MessageElement(role: "user", content: text)], temperature: 0.7)
+        let data = try? JSONEncoder().encode(httpBody)
+        request.httpBody = data
+        
+        let dataTask = session.dataTask(with: request) { data, response, error in
+            guard let data else { return }
+            do {
+                let response = try JSONDecoder().decode(Response.self, from: data)
+                completion(.success(response))
+            } catch {
+                completion(.failure(error))
+            }
+        }
+        dataTask.resume()
     }
 }
+
+
+// MARK: - Response
+struct Response: Codable {
+    let id, object: String
+    let model: String
+    let choices: [Choice]
+}
+
+// MARK: - Choice
+struct Choice: Codable {
+    let message: MessageElement
+}
+
+struct Request: Encodable {
+    let model: String
+    let messages: [MessageElement]
+    let temperature: Double
+}
+
+struct MessageElement: Codable {
+    let role, content: String
+}
+
