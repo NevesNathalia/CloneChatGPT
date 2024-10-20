@@ -39,10 +39,12 @@ class ChatService {
         }
         
         session.dataTask(with: request) { data, response, error in
+            NetworkLogger.log(request: request, response: response as? HTTPURLResponse, data: data)
             if let error = error {
                 completion(.failure(error))
                 return
             }
+            
             guard let data else { return }
             
             do {
