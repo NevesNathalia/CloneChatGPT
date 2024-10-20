@@ -16,7 +16,7 @@ class ChatViewController: UIViewController {
     
     var screen: ChatScreen?
     var viewModel: ChatViewModel = ChatViewModel()
-
+    
     override func viewWillAppear(_ animated: Bool) {
         configBarButton()
     }
@@ -54,10 +54,10 @@ class ChatViewController: UIViewController {
         view.backgroundColor = .background
     }
     
-     private func reloadData() {
-         DispatchQueue.main.async {
-             self.screen?.tableView.reloadData()
-         }
+    private func reloadData() {
+        DispatchQueue.main.async {
+            self.screen?.tableView.reloadData()
+        }
         vibrate()
     }
     
@@ -88,12 +88,7 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let message = viewModel.loadCurrentMessages(indexPath: indexPath)
-        
-        if let url = URL(string: message.message), message.typeMessage == .chatGPT {
-            let cell = tableView.dequeueReusableCell(withIdentifier: ImageTableViewCell.identifier, for: indexPath) as? ImageTableViewCell
-            cell?.setupCell(with: url)
-        }
+        let message = viewModel.loadCurrentMessage(indexPath: indexPath)
         
         switch message.typeMessage {
             
@@ -102,15 +97,22 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
             cell?.setupCell(data: message)
             return cell ?? UITableViewCell()
             
-        case .chatGPT:
-            let cell = tableView.dequeueReusableCell(withIdentifier: IncomingTextMessageTableViewCell.identifier, for: indexPath) as? IncomingTextMessageTableViewCell
-            cell?.setupCell(data: message)
-            return cell ?? UITableViewCell()
+        case .chatGPT, .placeholder:
+            if let url = URL(string: message.message), message.message.lowercased().contains("http") {
+                let cell = tableView.dequeueReusableCell(withIdentifier: ImageTableViewCell.identifier, for: indexPath) as? ImageTableViewCell
+                cell?.setupCell(with: url)
+                self.screen?.tableView.reloadRows(at: [indexPath], with: .none)
+                return cell ?? UITableViewCell()
+            } else {
+                let cell = tableView.dequeueReusableCell(withIdentifier: IncomingTextMessageTableViewCell.identifier, for: indexPath) as? IncomingTextMessageTableViewCell
+                cell?.setupCell(data: message)
+                return cell ?? UITableViewCell()
+            }
         }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return viewModel.heightForRow(indexPath: indexPath)
+        viewModel.heightForRow(indexPath: indexPath)
     }
 }
 
@@ -134,9 +136,9 @@ extension ChatViewController: ChatScreenProtocol {
         if message.contains("Crie uma imagem") {
             viewModel.fetchImage(with: message)
         } else {
-            viewModel.featchMessage(from: message)
+            viewModel.fetchMessage(from: message)
+            
         }
-        
         screen?.inputMessageTextField.text = ""
     }
 }

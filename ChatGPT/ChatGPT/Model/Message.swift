@@ -10,6 +10,7 @@ import Foundation
 enum TypeMessage {
     case user
     case chatGPT
+    case placeholder
 }
 
 struct Message {
