@@ -90,6 +90,11 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let message = viewModel.loadCurrentMessages(indexPath: indexPath)
         
+        if let url = URL(string: message.message), message.typeMessage == .chatGPT {
+            let cell = tableView.dequeueReusableCell(withIdentifier: ImageTableViewCell.identifier, for: indexPath) as? ImageTableViewCell
+            cell?.setupCell(with: url)
+        }
+        
         switch message.typeMessage {
             
         case .user:
@@ -125,7 +130,13 @@ extension ChatViewController: ChatScreenProtocol {
     func didSendMessage(_ message: String) {
         viewModel.addMessage(message: message, type: .user)
         reloadData()
-        viewModel.featchMessage(from: message)
+        
+        if message.contains("Crie uma imagem") {
+            viewModel.fetchImage(with: message)
+        } else {
+            viewModel.featchMessage(from: message)
+        }
+        
         screen?.inputMessageTextField.text = ""
     }
 }

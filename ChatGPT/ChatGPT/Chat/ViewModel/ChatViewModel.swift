@@ -51,6 +51,25 @@ class ChatViewModel {
         }
     }
         
+    public func fetchImage(with prompt: String) {
+        service.requestImage(prompt) { [weak self] result in
+            guard let self else { return }
+            
+            switch result {
+            case .success(let response):
+                if let imageURL = response.data.first?.url {
+                    self.addMessage(message: imageURL, type: .chatGPT)
+                    self.delegate?.success()
+                }
+                
+            case .failure(let error):
+                let errorMessage = error.localizedDescription
+                self.addMessage(message: errorMessage, type: .chatGPT)
+                self.delegate?.error(message: errorMessage)
+            }
+        }
+    }
+    
     public func heightForRow(indexPath: IndexPath) -> CGFloat {
         let message = loadCurrentMessages(indexPath: indexPath).message
         let font = UIFont.helveticaNeueMedium(size: 16)

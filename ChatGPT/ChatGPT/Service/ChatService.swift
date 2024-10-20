@@ -55,5 +55,45 @@ class ChatService {
             }
         }.resume()
     }
+    
+    
+    func requestImage(_ prompt: String, completion: @escaping (Result<ImageResponse, Error>) -> Void) {
+        let path = "/v1/images/generations"
+        let urlString = baseUrl + path
+        guard let url = URL(string: urlString) else { return }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        
+        do {
+            let body = RequestImage(
+                model: "dall-e-3",
+                prompt: prompt,
+                n: 1,
+                size: "1024x1024"
+            )
+            request.httpBody = try JSONEncoder().encode(body)
+        } catch {
+            completion(.failure(error))
+            return
+        }
+        
+        session.dataTask(with: request) { data, response, error in
+            NetworkLogger.log(request: request, response: response as? HTTPURLResponse, data: data)
+            if let error {
+                completion(.failure(error))
+                return
+            }
+            
+            guard let data else { return }
+            
+            do {
+                let response = try JSONDecoder().decode(ImageResponse.self, from: data)
+                completion(.success(response))
+            } catch {
+                completion(.failure(error))
+            }
+        }.resume()
+    }
 }
 

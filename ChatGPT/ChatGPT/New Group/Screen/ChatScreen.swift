@@ -74,6 +74,7 @@ class ChatScreen: UIView {
         tableView.showsVerticalScrollIndicator = false
         tableView.register(OutgoingTextMessageTableViewCell.self, forCellReuseIdentifier: OutgoingTextMessageTableViewCell.identifier)
         tableView.register(IncomingTextMessageTableViewCell.self, forCellReuseIdentifier: IncomingTextMessageTableViewCell.identifier)
+        tableView.register(ImageTableViewCell.self, forCellReuseIdentifier: ImageTableViewCell.identifier)
         tableView.transform = CGAffineTransform(scaleX: 1, y: -1)
         return tableView
     }()
