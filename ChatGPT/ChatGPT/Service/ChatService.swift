@@ -101,7 +101,7 @@ class ChatService {
                 completion(result)
             }
         }
-        clouserTest(.success(ImageResponse.init(created: 1, data: [.init(url: "https://fakeimg.pl/350x200/?text=Hello")])))
+        clouserTest(.success(ImageResponse.init(created: 1, data: [.init(url: "https://s3.ecompletocarros.dev/images/lojas/285/veiculos/131683/veiculoInfoVeiculoImagesMobile/vehicle_image_1676070038_d41d8cd98f00b204e9800998ecf8427e.jpeg")])))
     }
 }
 
